@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: url('background.jpg') no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .checkout-container {
+            width: 90%;
+            max-width: 600px;
+            background: rgba(255, 255, 255, 0.9); 
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .order-summary {
+            margin: 20px 0;
+            text-align: left;
+            color: #555;
+        }
+
+        .order-summary h2 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .order-summary p {
+            margin: 5px 0;
+            font-size: 1rem;
+        }
+
+        .total-price {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #007BFF;
+            margin: 20px 0;
+        }
+
+        .checkout-button {
+            display: inline-block;
+            padding: 12px 20px;
+            background-color: #007BFF;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .checkout-button:hover {
+            background-color: #0056b3;
+        }
+
+        .home-link {
+            margin-top: 20px;
+            display: block;
+            font-size: 1rem;
+            color: #007BFF;
+            text-decoration: none;
+        }
+
+        .home-link:hover {
+            text-decoration: underline;
+        }
+
+        .success-message {
+            font-size: 1.2rem;
+            color: #28a745;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="checkout-container">
+        <h1>Checkout Successful!</h1>
+        <p class="success-message">Your order has been placed successfully. Thank you for shopping with us!</p>
+
+        <div class="order-summary">
+            <h2>Order Summary</h2>
+            <p><strong>Total Items:</strong> 6</p>
+            <p><strong>Total Price:</strong> $265</p>
+        </div>
+
+        <a href="homepage.html" class="checkout-button">Back to Home</a>
+        <a href="cart.html" class="home-link">View Cart</a>
+        <script>
+            function checkout() {
+    fetch("checkout.php", { method: "POST" })
+        .then(response => response.json())
+        .then(data => {
+            alert(data.message);
+            window.location.href = "homepage.html";
+        });
+}
+
+             </script>
+    </div>
+</body>
+</html>

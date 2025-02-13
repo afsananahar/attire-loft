@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logout</title>
+    <style>
+       
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: url('background.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .logout-container {
+            background: rgba(0, 0, 0, 0.6); 
+            border-radius: 10px;
+            padding: 30px;
+            width: 300px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+
+        p {
+            font-size: 16px;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px 5px;
+            color: white;
+            text-decoration: none;
+            background-color: #007BFF;
+            border-radius: 5px;
+            font-size: 16px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+
+        .btn.secondary {
+            background-color: #6c757d;
+        }
+
+        .btn.secondary:hover {
+            background-color: #5a6268;
+        }
+    </style>
+</head>
+<body>
+    <div class="logout-container">
+        <h1>Logged Out</h1>
+        <p>You have successfully logged out. Thank you for visiting!</p>
+        <a href="login.html" class="btn">Log In Again</a>
+        <a href="homepage.html" class="btn secondary">Go to Homepage</a>
+    </div>
+</body>
+</html>
